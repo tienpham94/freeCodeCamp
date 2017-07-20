@@ -6,7 +6,7 @@ function translatePigLatin(str) {
     letters.push('w');
   }
   else{
-    for(var i=0; i<letters.length;i++){
+    while(true){
       if(vowels.indexOf(letters[0])<0){
         letters.push(letters.shift());
       }
