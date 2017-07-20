@@ -2,27 +2,16 @@ function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
   // Only change code below this line
-  var check = arguments[0];
-  var obj = arguments[1];
 
-  var keys = Object.keys(obj); //capulet
-
-  for(var i=0;i<check.length;i++){
-    if(check[i] === obj){
-      console.log("fuck");
-    }
-  }
-
-/*
-  for(var i = 0; i<keys.length;i++){ //iterate thru keys
-    for(var j=0; j<check.length;j++){
-      if(check[j].hasOwnProperty(keys[i])&&check[j][keys[i]] === obj[keys[i]]){
-        console.log(check[j])
-        arr.push(check[j]);
+  arr = collection.filter( function(obj){
+      for(var i in source){
+        if(source[i] != obj[i]){
+         return false;
       }
-      }
-    }
-    */
+   }
+   return true;
+ });
+
   // Only change code above this line
   return arr;
 }
