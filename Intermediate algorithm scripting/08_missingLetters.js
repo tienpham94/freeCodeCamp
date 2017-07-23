@@ -1,6 +1,6 @@
 
 function fearNotLetter(str) {
-  for(var i=0;i<str.length;i++){
+  for(var i=0;i<str.length-1;i++){
     if(str.charCodeAt(i) === str.charCodeAt(i+1)-1){
       continue;
     }
@@ -11,4 +11,4 @@ function fearNotLetter(str) {
   return undefined;
 }
 
-fearNotLetter("abce");
+console.log(fearNotLetter("xykdasd"));
