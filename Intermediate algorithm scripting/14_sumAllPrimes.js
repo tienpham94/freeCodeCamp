@@ -1,14 +1,15 @@
 function sumPrimes(num) {
 
   var arr = [];
-  for(var i=2;i<num;i++){
-    for(var j=2;j<=i;j++){
-      if(i===j){
-        arr.push(i);
-      }
-      if(i%j===0){
-        break;
-      }
+  for(var i=2;i<=num;i++){
+    var isPrime = true;
+    for(var j= 2;j<i;j++){
+     if(i%j===0){
+       isPrime = false;
+     }
+    }
+    if(isPrime){
+      arr.push(i);
     }
   }
 
